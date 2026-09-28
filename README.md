@@ -5,4 +5,4 @@ logisim python api
 
 # How to use
 
-python3 <file> > <your circ filename>.circ
+python3 "file" > "your circ filename".circ
