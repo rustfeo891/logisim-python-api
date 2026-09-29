@@ -10,7 +10,7 @@ ToolNameSocJtagUart="SocJtagUart"
 ToolNameNotGate="NOT Gate"
 ToolNameAndGate="AND Gate"
 ToolNameOrGate="OR Gate"
-ToolNameXoeGate="XOR Gate"
+ToolNameXorGate="XOR Gate"
 ToolNameNandGate="NAND Gate"
 ToolNameNorGate="NOR Gate"
 
@@ -420,8 +420,8 @@ def load_all_libraries():
 def build_default_toolbar():
    toolbar.start()
 
-   tool.add(ToolNameEditTool  if 'ToolNameEditTool'  in globals() else "Edit Tool")
-   tool.add(ToolNamePokeTool  if 'ToolNamePokeTool'  in globals() else "Poke Tool")
+   tool.add(ToolNameEditTool  if 'ToolNameEditTool'  in globals() else "Edit Tool",lib=LibBase[1])
+   tool.add(ToolNamePokeTool  if 'ToolNamePokeTool'  in globals() else "Poke Tool",lib=LibBase[1])
    tool.add(ToolNameWiringTool if 'ToolNameWiringTool' in globals() else "Wiring Tool",
              LibWiring[1])
 
@@ -430,7 +430,7 @@ def build_default_toolbar():
    tool.add(ToolNameNotGate, LibGate[1])
    tool.add(ToolNameAndGate, LibGate[1])
    tool.add(ToolNameOrGate,  LibGate[1])
-   tool.add(ToolNameXoeGate, LibGate[1])
+   tool.add(ToolNameXorGate, LibGate[1])
 
    sep.add()
 
